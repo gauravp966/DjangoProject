@@ -10,3 +10,10 @@ class User(models.Model):
 
     def __str__(self):
         return self.first_name
+
+
+class Details(models.Model):
+    add = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.add

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if user_list %}
+    <table>
+    <thead>
+    <th>First Name</th>
+    <th>Second Name</th>
+    <th>Email ID</th>
+    </thead>
+    {% for user in user_list %}
+    <tr>
+    <td>{{ user.first_name }}</td>
+    <td>{{ user.last_name }}</td>
+    <td>{{ user.email_id }}</td>
+    </tr>
+    {%  endfor %}
+    </table>
+    {%  else %}
+    <h1>NO DATA FOUND</h1>
+{% endif %}
+
+
+{#<ol>#}
+{#{% for user in user_list %}#}
+{#    <ul>#}
+{#        <li>{{ user.first_name }}</li>#}
+{#    </ul>#}
+{#{% endfor %}#}
+{#</ol>#}
+</body>
+</html>
