@@ -19,5 +19,12 @@ def form_detail_view(request):
     if request.method == 'POST':
         form = FormDetails(request.POST)
         if form.is_valid():
-            print(form.cleaned_data['first_name'])
+            form.save()
+
+            # first = form.cleaned_data['first_name']
+            # last = form.cleaned_data['last_name']
+            # email = form.cleaned_data['email_id']
+            # user = User(first_name=first, last_name=last, email_id=email)
+            # user.save()
+
     return render(request, 'second_app/form_details.html', {'form': form})
