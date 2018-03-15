@@ -1,10 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'second_app/base.html' %}
+{% block body_block %}
 {% if user_list %}
     <table>
     <thead>
@@ -14,7 +10,7 @@
     </thead>
     {% for user in user_list %}
     <tr>
-    <td>{{ user.first_name }}</td>
+    <td>{{ user.first_name | upper }}</td>
     <td>{{ user.last_name }}</td>
     <td>{{ user.email_id }}</td>
     </tr>
@@ -23,7 +19,7 @@
     {%  else %}
     <h1>NO DATA FOUND</h1>
 {% endif %}
-
+{% endblock %}
 
 {#<ol>#}
 {#{% for user in user_list %}#}
@@ -32,5 +28,3 @@
 {#    </ul>#}
 {#{% endfor %}#}
 {#</ol>#}
-</body>
-</html>

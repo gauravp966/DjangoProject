@@ -28,3 +28,7 @@ def form_detail_view(request):
             # user.save()
 
     return render(request, 'second_app/form_details.html', {'form': form})
+
+
+def relative(request):
+    return  render(request, 'second_app/relative_url.html')
