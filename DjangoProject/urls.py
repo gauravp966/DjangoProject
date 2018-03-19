@@ -26,3 +26,5 @@ urlpatterns = [
     path('second_app/', include('second_app.urls')),
     path('third_app/', include('third_app.urls'))
 ]
+
+urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
