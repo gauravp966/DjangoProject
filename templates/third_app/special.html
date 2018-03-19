@@ -1,0 +1,8 @@
+{% extends 'third_app/base.html' %}
+{% load staticfiles %}
+{% block body_block %}
+    {{ user.username }}
+    {{ user.email }}
+    {{ user_profile.portfolio_site }}
+    <img src="{{ MEDIA_URL }}{{ user_profile.profile_pic }}" alt="Not FOund">
+{% endblock %}
